@@ -18,7 +18,6 @@
 		217C556D1D42D1E10064A2AD /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217C556C1D42D1E10064A2AD /* CommonCrypto.framework */; };
 		217C55701D42D1ED0064A2AD /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217C556F1D42D1ED0064A2AD /* CommonCrypto.framework */; };
 		217C55731D42D2410064A2AD /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 217C55691D42D1CF0064A2AD /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		217C55751D42D2550064A2AD /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 217C55661D42D1C00064A2AD /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		217C55771D42D2680064A2AD /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 217C556C1D42D1E10064A2AD /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		218E2D541D63F672000A60DB /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211227B41C137DB60042D93A /* HMAC.swift */; };
 		218E2D551D63F780000A60DB /* Data+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2112167A1AE68C18004E1CE6 /* Data+Crypto.swift */; };
@@ -42,6 +41,7 @@
 		80098A881C12E9370029C530 /* Crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 211216421AE68AD2004E1CE6 /* Crypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		80098A8D1C12EC340029C530 /* DigestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2112164F1AE68AD3004E1CE6 /* DigestTests.swift */; };
 		8045033F1BA2101C002A5470 /* Crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 211216421AE68AD2004E1CE6 /* Crypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB22AFDA1FEAD99F006F3AEB /* CommonCrypto.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB453C011F50170D008F4B27 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB453C0A1F50173F008F4B27 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB453C031F50170D008F4B27 /* CommonCrypto.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,7 +122,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				217C55751D42D2550064A2AD /* CommonCrypto.framework in Embed Frameworks */,
+				CB22AFDA1FEAD99F006F3AEB /* CommonCrypto.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +535,7 @@
 					};
 					21FD8C641AE6B03F008DCDBA = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 936EKNL558;
 						LastSwiftMigration = 0800;
 					};
 					80098A6E1C12E87D0029C530 = {
@@ -859,7 +860,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -977,7 +978,6 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Crypto/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.crypto;
 				PRODUCT_NAME = Crypto;
@@ -1002,7 +1002,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Crypto/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.crypto;
 				PRODUCT_NAME = Crypto;
@@ -1021,10 +1020,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = 936EKNL558;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1043,10 +1039,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				DEVELOPMENT_TEAM = 936EKNL558;
 				INFOPLIST_FILE = CryptoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nothingmagical.$(PRODUCT_NAME:rfc1034identifier)";
